@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Operations</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function()
+								{
+					    			$("#button1").click(function()
+								    						{
+								    							alert("Avinash");
+								    							var xhttp = new XMLHttpRequest();
+																xhttp.onreadystatechange = function() 
+																{
+								    							alert("Avinash");
+																	if (xhttp.readyState == 4 && xhttp.status == 200) 
+																	{
+																	    $("#tblItems").html(xhttp.responseText);
+																	}
+																};
+																xhttp.open("GET", "tblItemsOperations.jsp?ItemNo="+$("#txt1").val()+"&ItemName="+$("#txt2").val()+"&ItemPrice="+$("#txt3").val()+"&ItemQty="+$("#txt4").val(), true);
+																xhttp.send();
+																
+								            				});
+
+					    		});
+</script>
+</head>
+<body>
+	<center>
+		<input type = "text" placeholder = "ItemNo" id = "txt1">
+		<input type = "text" placeholder = "ItemName" id = "txt2" style = "margin-left:20px"><br/><br/>
+		<input type = "text" placeholder = "ItemPrice" id = "txt3">
+		<input type = "text" placeholder = "ItemQty" id = "txt4" style = "margin-left:20px"><br/><br/>
+		<button id = "button1">Save</button><br/><br/>
+
+		<div id = "tblItems"></div>
+	</center>
+</body>
+</html>
