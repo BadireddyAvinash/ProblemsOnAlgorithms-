@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>AviCalculator</title>
+		<script>
+			function onPressed(ide)
+			{
+				if(document.getElementById(ide).value != "=")
+				{
+					document.getElementById("txt").value = document.getElementById("txt").value + document.getElementById(ide).value;
+				}
+				else 
+				{
+					document.getElementById("txt").value = eval(document.getElementById("txt").value);
+				}
+				if(document.getElementById(ide).value == "C")
+				{
+					document.getElementById("txt").value = '';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<center>
+			<h3>Simple Calculator</h3><br/>
+			<table border = 2>
+				<tr>
+					<td colspan = 10><input type = text Name = "display" id = "txt" value = " "></td>
+				</tr>
+				<tr>
+					<td><input type = button id = "B1" value = "0" OnClick = "onPressed(id)"></td>
+					<td><input type = button id = "B2" value = "1" OnClick = "onPressed(id)"></td>
+					<td><input type = button id = "B3" value = "2" OnClick = "onPressed(id)"></td>
+					<td><input type = button id = "B4" value = "+" OnClick = "onPressed(id)"></td>
+				</tr>
+				<tr>
+					<td><input type = button id = "B5" value = "3" OnClick = "onPressed(id)"></td>
+					<td><input type = button id = "B6" value = "4" OnClick = "onPressed(id)"></td>
+					<td><input type = button id = "B7" value = "5" OnClick = "onPressed(id)"></td>
+					<td><input type = button id = "B8" value = "-" OnClick = "onPressed(id)"></td>
+				</tr>
+				<tr>
+					<td><input type = button id = "B9" value = "6" OnClick = "onPressed(id)"></td>
+					<td><input type = button id = "B10" value = "7" OnClick = "onPressed(id)"></td>
+					<td><input type = button id = "B11" value = "8" OnClick = "onPressed(id)"></td>
+					<td><input type = button id = "B12" value = "*" OnClick = "onPressed(id)"></td>
+				</tr>
+				<tr>
+					<td><input type = button id = "B13" value = "9" OnClick = "onPressed(id)"></td>
+					<td><input type = button id = "B14" value = "C" OnClick = "onPressed(id)"></td>
+					<td><input type = button id = "B15" value = "=" OnClick = "onPressed(id)"></td>
+					<td><input type = button id = "B16" value = "/" OnClick = "onPressed(id)"></td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>
