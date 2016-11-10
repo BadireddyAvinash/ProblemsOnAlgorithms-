@@ -1,3 +1,4 @@
+//Program to print Max sub Array sum in the given array.
 #include <stdio.h>
 void generateSubArrays(int array[],int size)
 {
